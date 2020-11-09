@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi metter-feet</title>
+</head>
+<body>
+<input type="text" id="1">Mét</input>
+<input type="button" onclick="check()" value="Chuyển đổi">
+<input type="text" id="2" value="Feet" disabled>
+<br>
+<input type="text" id="3">Feet</input>
+<input type="button" onclick="check1()" value="Chuyển đổi">
+<input type="text" id="4" value="Mét" disabled>
+<script>
+    function check() {
+        let chuyen= +document.getElementById("1").value;
+        conversmF(chuyen);
+        document.getElementById("2").value=result;
+    }
+    function check1() {
+        let chuyen= +document.getElementById("3").value;
+        conversFm(chuyen);
+        document.getElementById("4").value=result;
+    }
+    function conversmF(m) {
+        if (m < 0) {
+            return result='Không thể nhập số âm';
+        } else {
+            return result=(m/0.3048);
+        }
+    }
+    function conversFm(F) {
+        if (F < 0) {
+            return result='không thể nhập số âm';
+        } else {
+            return result=(F/3.279);
+        }
+    }
+</script>
+</body>
+</html>
